@@ -7,12 +7,10 @@ public class ProductPage extends BasePage{
     }
 
     public void addToCart(){
-        driver.findElement(Constants.addToCartButton).click();
+        click(Constants.addToCartButton);
     }
 
     public boolean isProductAddedToCart(){
         return !driver.findElement(Constants.cartItemCount).getText().equals(0);
     }
-
-
 }

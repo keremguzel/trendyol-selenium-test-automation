@@ -1,7 +1,4 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class ProductsPage extends BasePage {
 
@@ -10,11 +7,10 @@ public class ProductsPage extends BasePage {
     }
 
     public void selectFirstProduct(){
-        List<WebElement> productsList = driver.findElements(Constants.productsList);
-        productsList.get(0).click();
+        selectNthElement(Constants.productsList,1);
     }
 
     public boolean isProductSelected(){
-        return driver.findElement(Constants.favoriteCounter).isDisplayed();
+        return isDisplayed(Constants.favoriteCounter);
     }
 }

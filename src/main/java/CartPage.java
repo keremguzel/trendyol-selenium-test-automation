@@ -7,10 +7,10 @@ public class CartPage extends BasePage{
     }
 
     public void goToCart(){
-        driver.findElements(Constants.cartLink).get(2).click();
+        selectNthElement(Constants.cartLink,3);
     }
 
     public boolean isOnCartPage(){
-        return driver.findElement(Constants.showCartOnOrderPage).isDisplayed();
+        return isDisplayed(Constants.showCartOnOrderPage);
     }
 }

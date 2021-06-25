@@ -1,6 +1,5 @@
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HomePage extends BasePage {
 
@@ -9,12 +8,11 @@ public class HomePage extends BasePage {
     }
 
     public void searchProductOnSearchBox(String productName){
-        WebElement searchBox = driver.findElement(Constants.searchBox);
-        searchBox.sendKeys(productName);
-        searchBox.sendKeys(Keys.ENTER);
+        sendKeys(Constants.searchBox,productName);
+        sendKeys(Constants.searchBox,Keys.ENTER);
     }
 
     public String checkProductNameOnSearchBox(){
-        return driver.findElement(Constants.searchBox).getAttribute("value");
+        return getAttribute(Constants.searchBox,"value");
     }
 }
