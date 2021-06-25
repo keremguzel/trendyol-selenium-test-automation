@@ -13,7 +13,7 @@ public class BasePage {
     }
 
     public void closeHomepagePopUp(){
-        driver.findElement(Constants.closeHomepagePopUpButton).click();
+        click(Constants.closeHomepagePopUpButton);
     }
 
     public void switchToNextTab(){
