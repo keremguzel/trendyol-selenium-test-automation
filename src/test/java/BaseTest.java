@@ -26,4 +26,9 @@ public class BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
     }
+
+    @AfterAll
+    public void teardown(){
+        driver.quit();
+    }
 }
