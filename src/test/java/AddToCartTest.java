@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AddToCartTest extends BaseTest{
@@ -26,6 +25,7 @@ public class AddToCartTest extends BaseTest{
     @Order(3)
     public void addToCart(){
         productPage.addToCart();
+        wait.until(ExpectedConditions.elementToBeClickable(Constants.addToCartButton));
         Assertions.assertTrue(productPage.isProductAddedToCart());
     }
 

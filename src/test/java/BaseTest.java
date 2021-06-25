@@ -20,7 +20,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.get("https://www.trendyol.com/");
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver,5);
+        wait = new WebDriverWait(driver,2);
         homePage = new HomePage(driver);
         productsPage = new ProductsPage(driver);
         productPage = new ProductPage(driver);
